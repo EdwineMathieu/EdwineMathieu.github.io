@@ -1,0 +1,25 @@
+@font-face {        
+    font-family: "Chellyne";
+    src: url("../fonts/Chellyne.ttf") format("truetype");
+}
+
+@font-face {        
+    font-family: "Montserrat";
+    src: url("../fonts/static/Montserrat-Medium.ttf") format("truetype");
+}
+
+    h1 {font-family: "Chellyne";
+    font-size: 2em;
+    color: pink;}
+
+p {font-family: "Montserrat";
+font-size: 18px;
+color: grey;}
+
+    main {background-color: rgb(233, 233, 176);}
+    
+    .diplom {background-color: rgb(237, 198, 204);}
+
+    .experiences {background-color: rgb(100, 163, 142);}
+    
+    .col2 {background-color: rgb(189, 157, 98);}
