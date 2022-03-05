@@ -1,3 +1,6 @@
+/********** CHARTE GRAPHIQUE **************/
+/******************************************/
+
 @font-face {        
     font-family: "Chellyne";
     src: url("../fonts/Chellyne/Chellyne.ttf") format("truetype");
@@ -8,18 +11,307 @@
     src: url("../fonts/static/Montserrat-Medium.ttf") format("truetype");
 }
 
-    h1 {font-family: "Chellyne";
+@font-face {        
+    font-family: "Cedarville";
+    src: url("../fonts/CedarvilleCursive-Regular.ttf") format("truetype");}
+
+@font-face {        
+        font-family: "Jost";
+        src: url("../fonts/Jost-Italic-VariableFont_wght.ttf") format("truetype");
+    }
+
+    @font-face {        
+        font-family: "Fira";
+        src: url("../fonts/FiraSans-Light.ttf") format("truetype");
+    }
+/******* COULEURS *********/ 
+html{--noir:#000;
+    --blanc:#fff;
+    --rose:#FF42A8;
+    --vert:#71FFB9;
+    --jaune:#FCBE10;
+    --beige:#d6983d;
+    --orange: #ff6c03;
+    --grey:rgb(55, 55, 55);
+    --lightgrey:#ECECF0;
+
+    --Montserrat: "Montserrat";
+    --Cedarville: "Cedarville";
+    --Fira: "Fira";
+    --Jost: "jost";
+
+}
+
+/******** POLICES ********/
+
+h1 {font-family: "Chellyne";
+    font-size: 3.5em;
+    color:var(--noir);
+    text-align: left;
+    padding: 2em 0 0.5em 0;}
+
+h2 {
+    font-family: "Montserrat";
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--vert);
+    padding-bottom: 1em;
+    text-decoration: underline dotted 5px var(--rose);
+   
+}    
+
+h3 {
+    font-family: var(--Montserrat);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5em;
+ }
+ 
+ h4{
+    font-family:var(--Fira);
+    font-size: 1.1em;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}
+
+p {
+    font-family: "Fira";
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+h4 p {
+    padding-bottom: 0.5em;
+}
+
+li {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1em;
+}
+.col2 h3 {text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    color: var(--beige);
+}
+/*******************************************************/
+/****************** CSS CONTENU ***********************/
+
+body {
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.headcolor{
+    background-color: var(--beige);
+    height: 6em;
+}
+main {
+    margin:1.5em;
+}
+.infos {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    padding-left: 1em;
+    }
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 1em 1em 1em;
+    width: 30%;
+   }
+
+
+
+
+.ed_img {
+    display: block;
+    
+  }
+
+#edwine {
+    font-family: var(--Montserrat);
     font-size: 2em;
-    color: pink;}
+    font-weight: 600;
+    color: var(--rose);
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    }
 
-p {font-family: "Montserrat";
-font-size: 18px;
-color: grey;}
+.edwine p {
+    font-size: 1.1em;
+    font-family: var(--Montserrat);
+    padding-bottom:0.3em}
 
-    main {background-color: rgb(233, 233, 176);}
+.job {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 60%;
+   
     
-    .diplom {background-color: rgb(237, 198, 204);}
+}
 
-    .experiences {background-color: rgb(100, 163, 142);}
+blockquote { 
+    font-family: "Cedarville";
+    font-size: 2em;
+    font-style: italic;
+    color: var(--beige);
+    text-align: left;
+    display: inline;
+
+ }
+
+
+ 
+.introduction {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    margin: 0 Auto;
+}
+
+.edito {
+    margin:0 15% 0 15%;
+    width: 30%;
     
-    .col2 {background-color: rgb(189, 157, 98);}
+}
+
+#presentation {
+    font-family: var(--Fira);
+    margin: 1em;
+    font-size: 1em;
+}
+
+
+
+#contact {
+        background-color: var(--rose);
+        border-radius: 10px;
+        color: var(--blanc);
+        font-family: var(--Montserrat);
+        font-size: 0.9;
+        padding: 0.5em;
+    }
+
+    #contact:hover {
+        background-color: var(--vert);
+    }
+
+nav {
+    
+ justify-content: left;
+ margin-right: 15%;
+}
+
+nav ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--lightgrey);
+    padding: 0.5em 2em 0.5em 2em;
+    width: 100%;
+    border-radius: 10px;
+    margin: 2em;
+    }
+
+nav li {
+    font-size: 1.1em;
+    font-family: var(--Montserrat);
+    font-weight:600;
+    text-transform: uppercase;
+    color: var(--grey);
+    padding: 0.5em 1em 0.5em 1em;
+}
+nav li:hover {
+    text-decoration: underline;
+    color: var(--rose);
+}
+
+.cv_contenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2em 15%;
+}
+
+.col1 {
+    padding: 1em;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.skills {}
+
+.col2 {
+    padding: 1em 1em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+   
+    .experiences {
+        background-color: var(--lightgrey);
+        padding: 1em;
+        border-radius: 1em;
+        margin-bottom: 1em;
+        color: var(--grey);
+    }
+    
+    .company {
+        display: flex;
+        flex-direction: row;
+        
+ }
+
+ .company p {
+    font-family: var(--Fira);
+    font-weight: 500;
+    font-size: 0.9em;
+    
+}
+
+.company__name{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.period {
+      padding-left: 0.5em;}
+      
+
+   .company__last_p {
+        padding-bottom: 1.3em;
+        
+    }
+    
+    .diplom {
+        background-color: var(--lightgrey);
+        padding: 1em;
+        border-radius: 1em;
+        color: var(--grey);
+    }
+.diplom h3 {
+    background-color: var(--jaune);
+}
+
+    
+    footer{
+        background-color: var(--rose);
+        padding-top: 2em;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer li {font-family: var(--Montserrat);
+        padding-bottom: 0.5em;
+        font-size: 1.2em;
+    } 
