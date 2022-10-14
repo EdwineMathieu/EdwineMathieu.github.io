@@ -12,18 +12,27 @@
 }
 
 @font-face {        
-    font-family: "Cedarville";
-    src: url("../fonts/CedarvilleCursive-Regular.ttf") format("truetype");}
+    font-family: "Suavity";
+    src: url("../fonts/CedarvilleCursive-Regular.ttf");
+}
 
 @font-face {        
-        font-family: "Jost";
-        src: url("../fonts/Jost-Italic-VariableFont_wght.ttf") format("truetype");
+    font-family: "Jost";
+    src: url("../fonts/Jost-Italic-VariableFont_wght.ttf") format("truetype");
     }
 
-    @font-face {        
-        font-family: "Fira";
-        src: url("../fonts/FiraSans-Light.ttf") format("truetype");
-    }
+@font-face {        
+    font-family: "Fira";
+    src: url("../fonts/FiraSans-Light.ttf") format("truetype");
+         }
+
+@font-face {        
+    font-family: "Open";
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+                    }
+
+           
+
 /******* COULEURS *********/ 
 html{--noir:#000;
     --blanc:#fff;
@@ -34,6 +43,7 @@ html{--noir:#000;
     --orange: #ff6c03;
     --grey:rgb(55, 55, 55);
     --lightgrey:#ECECF0;
+    --shadowgrey:#CAC9D1;
 
     --Montserrat: "Montserrat";
     --Cedarville: "Cedarville";
@@ -44,19 +54,21 @@ html{--noir:#000;
 
 /******** POLICES ********/
 
-h1 {font-family: "Chellyne";
-    font-size: 3.5em;
+h1 {font-family: "Open";
+    font-size: 2.5em;
+    font-weight: 900;
     color:var(--noir);
     text-align: left;
-    padding: 2em 0 0.5em 0;}
+    padding: 3em 0 0.5em 0;
+}
 
 h2 {
     font-family: "Montserrat";
     font-size: 1.5em;
     font-weight: 600;
-    color: var(--vert);
+    color: var(--jaune);
     padding-bottom: 1em;
-    text-decoration: underline dotted 5px var(--rose);
+    text-decoration: underline dotted 5px var(--noir);
    
 }    
 
@@ -89,6 +101,7 @@ li {
     font-family: "Montserrat";
     font-weight: 500;
     font-size: 1em;
+    line-height: 1.5em;
 }
 .col2 h3 {text-align: center;
     padding-bottom: 1em;
@@ -100,19 +113,28 @@ li {
 
 body {
     box-sizing: border-box;
-    overflow-y: scroll;
-}
-.headcolor{
-    background-color: var(--beige);
-    height: 6em;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    /*overflow-y: scroll;            probleme de superposition des box    */
+} 
+.headcolor {
+    background-color: var(--jaune);
+    height: 10em;
+    width:100vw;
+  
 }
 main {
     margin:1.5em;
+             
 }
+
 .infos {
-    display: flex;
-    flex-direction: row;
-    margin-left: 10%;
+   /*display: flex;
+   flex-direction: row;*/
+    margin-left: 15%;
     padding-left: 1em;
     }
 
@@ -129,61 +151,64 @@ main {
 
 .ed_img {
     display: block;
-    
+    width: 30%;
+   
   }
 
-#edwine {
+#name {
     font-family: var(--Montserrat);
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 600;
-    color: var(--rose);
+    color: var(--grey);
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     }
 
-.edwine p {
+.name p {
     font-size: 1.1em;
     font-family: var(--Montserrat);
     padding-bottom:0.3em}
 
 .job {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 60%;
-   
-    
-}
+    width: 60vw;*/
+   }
 
 blockquote { 
-    font-family: "Cedarville";
-    font-size: 2em;
+    font-family: "Suavity";
+    font-size: 1.5em;
     font-style: italic;
-    color: var(--beige);
+    color: var(--rose);
     text-align: left;
     display: inline;
+}
 
- }
+ 
 
 
  
 .introduction {
     text-align: left;
     display: flex;
-    flex-direction: row;
-    margin: 0 Auto;
+    width: 100%;
+    
+  
 }
 
 .edito {
-    margin:0 15% 0 15%;
-    width: 30%;
+   margin: 0 0 0 15%;
+    width: 25%;
     
 }
 
 #presentation {
-    font-family: var(--Fira);
+    font-family: var(--Jost);
+    font-weight: 600;
+    color: #FCBE10;
     margin: 1em;
     font-size: 1em;
 }
@@ -196,7 +221,9 @@ blockquote {
         color: var(--blanc);
         font-family: var(--Montserrat);
         font-size: 0.9;
-        padding: 0.5em;
+        padding: 1em 0.5em;
+        width: 160px;
+        text-align: center;
     }
 
     #contact:hover {
@@ -207,6 +234,7 @@ nav {
     
  justify-content: left;
  margin-right: 15%;
+ align-items: center;
 }
 
 nav ul {
@@ -217,7 +245,8 @@ nav ul {
     padding: 0.5em 2em 0.5em 2em;
     width: 100%;
     border-radius: 10px;
-    margin: 2em;
+   
+    
     }
 
 nav li {
@@ -230,33 +259,41 @@ nav li {
 }
 nav li:hover {
     text-decoration: underline;
-    color: var(--rose);
+    color: var(--beige);
 }
 
 .cv_contenu {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 2em 15%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   /*position: absolute;
+   top: 15%;
+   left:0;
+   right:0;
+   bottom: 6%;
+   overflow-y: auto;*/
+   
 }
 
-.col1 {
+.col {
     padding: 1em;
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
-}
+  }
 
-.skills {}
+  .skills1 {
+      font-family: var(--Fira  );
+  }
 
-.col2 {
+/*.col2 {
     padding: 1em 1em 1em 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+}*/
+
    
     .experiences {
         background-color: var(--lightgrey);
@@ -264,12 +301,17 @@ nav li:hover {
         border-radius: 1em;
         margin-bottom: 1em;
         color: var(--grey);
+        box-shadow:5px 5px 5px var(--shadowgrey);
     }
     
+    .experiences h3 {
+        background-color: var(--jaune);
+    }
+
     .company {
         display: flex;
         flex-direction: row;
-        
+       
  }
 
  .company p {
@@ -279,13 +321,14 @@ nav li:hover {
     
 }
 
-.company__name{
-    font-size: 3em;
+.company__name {
+    font-size: 1em;
     font-weight: 600;
 }
 
 .period {
-      padding-left: 0.5em;}
+      padding-left: 0.5em;
+    }
       
 
    .company__last_p {
@@ -298,20 +341,68 @@ nav li:hover {
         padding: 1em;
         border-radius: 1em;
         color: var(--grey);
+        box-shadow:5px 5px 5px var(--shadowgrey);
     }
 .diplom h3 {
     background-color: var(--jaune);
 }
 
-    
+  
     footer{
-        background-color: var(--rose);
+        background-color: var(--noir);
         padding-top: 2em;
         display: flex;
         flex-direction: row;
+        color: var(--blanc);
+        padding: 3em 15%;
     }
     
-    footer li {font-family: var(--Montserrat);
+    footer li {
+        font-family: var(--Montserrat);
         padding-bottom: 0.5em;
-        font-size: 1.2em;
+        font-size: 1em;
+        width: 100vw;
+        
     } 
+
+
+
+
+
+
+/* Mobile First CSS */
+
+/* Mobile + */
+ 
+
+/* Phablets */
+@media (min-width: 550px) { /* ... */ }
+
+/* Tablettes */
+@media (min-width: 750px) { /* ... */ }
+
+/* Desktop */
+@media (min-width: 1000px) { /* ... */ }
+
+/* Desktop HD */
+@media (min-width: 1200px) { /* ... */ }
+
+/* Desktop Wide */
+@media (min-width: 1400px) { /* ... */ }
+/* je précise une règle à appliquer si on souhaite imprimer notre page */
+@media print {
+    .footer, .header{
+        display:none;
+    }
+    /* je masque le header et le footer */
+}
+/* landscape correspond à la résolution du type PC largeur > longueur
+portrait correspond à la résolution du type portable longueur > largeur */
+@media screen and (orientation: portrait){
+    .cv_contenu{
+        justify-content: center;
+    }
+    .col{
+        width:80%;
+    }
+}
