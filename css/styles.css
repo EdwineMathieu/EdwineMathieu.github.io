@@ -120,6 +120,10 @@ body {
     height: 100vh;
     /*overflow-y: scroll;            probleme de superposition des box    */
 } 
+
+header {
+    display: contents;
+}
 .headcolor {
     background-color: var(--jaune);
     height: 10em;
@@ -150,7 +154,7 @@ main {
 
 
 .ed_img {
-    display: block;
+    /*display: block;*/
     width: 30%;
    
   }
