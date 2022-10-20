@@ -171,13 +171,13 @@ main {
 
 
 blockquote { 
-    
     font-family: "Suavity";
     font-size: 1.5em;
     font-style: italic;
-    color: var(--shadowgrey);
+    color: var(--grey);
     text-align: left;
     line-height: 2em;
+    padding-left: 2em;
 }
 #blockquote1 { 
     padding-top: 7%;
