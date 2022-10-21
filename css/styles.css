@@ -179,10 +179,15 @@ blockquote {
     line-height: 2em;
     padding-left: 2em;
 }
+
 #blockquote1 { 
     padding-top: 7%;
 }
  
+#blockquote2 {color: var(--jaune);
+    
+}
+
 .introduction {
     text-align: left;
     display: flex;
@@ -349,12 +354,14 @@ nav li:hover {
         display: flex;
         flex-direction: row;
         color: var(--blanc);
-        padding: 3em 15%;
+        padding-left: 5%;
+        padding-bottom: 5%;
     }
     
     footer li {
         font-family: var(--Montserrat);
         padding-bottom: 0.5em;
+      
         font-size: 1em;
         width: 100vw;
         
